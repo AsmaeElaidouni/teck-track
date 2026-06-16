@@ -1,0 +1,20 @@
+CHECK-LIST DEMARRAGE COMPRESSEUR AC-40
+
+PRE-DEMARRAGE:
+[ ] Niveau huile compresseur OK
+[ ] Pression air reservoir OK (min 6 bars)
+[ ] Etat courroies transmission OK
+[ ] Filtre air propre
+[ ] Absence fuites visibles
+[ ] Soupape securite OK
+
+DEMARRAGE:
+[ ] Ouvrir vanne entree air
+[ ] Mettre en marche
+[ ] Verifier montee pression
+[ ] Controle temperature (max 80C)
+
+EN SERVICE:
+[ ] Purger condensats toutes les 4h
+[ ] Surveiller pression (6-10 bars)
+[ ] Controler temperature toutes les 2h

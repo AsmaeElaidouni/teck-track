@@ -1,0 +1,77 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mysql"
+  url      = env("DATABASE_URL")
+}
+
+// Roles: ADMIN | TECHNICIAN | EMPLOYEE
+model User {
+  id              Int      @id @default(autoincrement())
+  email           String   @unique
+  password        String
+  name            String
+  role            String   @default("EMPLOYEE") // ADMIN | TECHNICIAN | EMPLOYEE
+  assignedTickets Ticket[] @relation("TechnicianTickets")
+  createdTickets  Ticket[] @relation("CreatorTickets")
+  createdAt       DateTime @default(now())
+  updatedAt       DateTime @updatedAt
+}
+
+model Ticket {
+  id           Int           @id @default(autoincrement())
+  title        String
+  description  String        @db.Text
+  status       String        @default("PENDING") // PENDING, IN_PROGRESS, REPAIRED
+  priority     String        @default("NORMAL") // LOW, NORMAL, URGENT
+  type         String        @default("OTHER")   // HARDWARE, SOFTWARE, NETWORK, OTHER
+  comment      String?       @db.Text
+  creatorId    Int?
+  creator      User?         @relation("CreatorTickets", fields: [creatorId], references: [id])
+  technicianId Int?
+  technician   User?         @relation("TechnicianTickets", fields: [technicianId], references: [id])
+  consumptions Consumption[]
+  createdAt    DateTime      @default(now())
+  updatedAt    DateTime      @updatedAt
+}
+
+model Part {
+  id           Int           @id @default(autoincrement())
+  name         String        @unique
+  stock        Int           @default(0)
+  minThreshold Int           @default(5)
+  consumptions Consumption[]
+  createdAt    DateTime      @default(now())
+  updatedAt    DateTime      @updatedAt
+}
+
+model Consumption {
+  id        Int      @id @default(autoincrement())
+  ticketId  Int
+  ticket    Ticket   @relation(fields: [ticketId], references: [id])
+  partId    Int
+  part      Part     @relation(fields: [partId], references: [id])
+  quantity  Int
+  createdAt DateTime @default(now())
+}
+
+model AccessRequest {
+  id        Int      @id @default(autoincrement())
+  name      String
+  email     String   @unique
+  role      String   @default("EMPLOYEE") // EMPLOYEE, TECHNICIAN
+  status    String   @default("PENDING") // PENDING, APPROVED, REJECTED
+  createdAt DateTime @default(now())
+}
+
+model Notification {
+  id        Int      @id @default(autoincrement())
+  userId    Int
+  title     String
+  message   String
+  type      String   @default("INFO") // INFO, SUCCESS, WARNING, URGENT
+  isRead    Boolean  @default(false)
+  createdAt DateTime @default(now())
+}

@@ -1,0 +1,61 @@
+%PDF-1.1
+1 0 obj
+<< /Type /Catalog /Pages 2 0 R >>
+endobj
+2 0 obj
+<< /Type /Pages /Kids [3 0 R] /Count 1 >>
+endobj
+3 0 obj
+<< /Type /Page /Parent 2 0 R /Resources << /Font << /F1 << /Type /Font /Subtype /Type1 /BaseFont /Helvetica >> >> >> /MediaBox [0 0 595 842] /Contents 4 0 R >>
+endobj
+4 0 obj
+<< /Length 974 >>
+stream
+BT
+/F1 22 Tf
+50 750 Td
+(CONSIGNES DE SECURITE : CONVOYEUR) Tj
+/F1 12 Tf
+0 -40 Td
+(Systeme: Systeme de Convoyage) Tj
+0 -20 Td
+(Editeur: S-NAJ Technologie - Nador) Tj
+0 -30 Td
+(1. GENERALITES ET SECURITE :) Tj
+0 -20 Td
+(  - Toujours consigner la machine avant toute intervention.) Tj
+0 -20 Td
+(  - Porter les EPI obligatoires (casque, lunettes, gants).) Tj
+0 -30 Td
+(2. PROCEDURES DE MAINTENANCE PREVENTIVE :) Tj
+0 -20 Td
+(  - Inspecter les connexions electriques et nettoyer la poussiere.) Tj
+0 -20 Td
+(  - Verifier le niveau d'huile hydraulique et les filtres.) Tj
+0 -20 Td
+(  - Controler l'alignement des courroies et la tension.) Tj
+0 -20 Td
+(  - Effectuer les tests de bon fonctionnement des arrets d'urgence.) Tj
+0 -30 Td
+(3. FREQUENCE DES INTERVENTIONS :) Tj
+0 -20 Td
+(  - Hebdomadaire: Nettoyage et inspection visuelle.) Tj
+0 -20 Td
+(  - Mensuelle: Lubrification et serrage des vis.) Tj
+0 -20 Td
+(  - Semestrielle: Diagnostic complet et etalonnage des capteurs.) Tj
+ET
+endstream
+endobj
+xref
+0 5
+0000000000 65535 f 
+0000000009 00000 n 
+0000000058 00000 n 
+0000000115 00000 n 
+0000000290 00000 n 
+trailer
+<< /Size 5 /Root 1 0 R >>
+startxref
+1315
+%%EOF

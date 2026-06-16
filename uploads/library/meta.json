@@ -1,0 +1,22 @@
+[
+  {
+    "id": 1,
+    "title": "Guide de maintenance presse hydraulique",
+    "machine": "Presse Hydraulique",
+    "type": "PDF",
+    "size": "0.1 MB",
+    "filename": "sample-guide.pdf",
+    "originalName": "sample-guide.pdf",
+    "uploadedAt": "2026-05-24T00:00:00.000Z"
+  },
+  {
+    "id": 2,
+    "title": "Procédure de sécurité convoyeur",
+    "machine": "Système de convoyage",
+    "type": "PDF",
+    "size": "0.1 MB",
+    "filename": "sample-safety.pdf",
+    "originalName": "sample-safety.pdf",
+    "uploadedAt": "2026-05-24T00:00:00.000Z"
+  }
+]

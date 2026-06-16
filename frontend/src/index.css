@@ -1,0 +1,165 @@
+@import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@600;700;800;900&family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&display=swap');
+
+@theme {
+  --color-flare-black: #14171B;
+  --color-flare-red: #df4b37;
+  /* TECK TRACK Orange */
+  --color-flare-coral: #ee6f5a;
+  /* Lighter Orange */
+  --color-flare-gray: #7b818a;
+  --color-flare-white: #ffffff;
+
+  /* Overrides for utility usage */
+  --color-primary: var(--color-flare-red);
+  --color-secondary: var(--color-flare-coral);
+  --color-bg-dark: var(--color-flare-black);
+
+  --font-sans: "Inter", sans-serif;
+  --font-heading: "Space Grotesk", sans-serif;
+  --font-montserrat: "Space Grotesk", sans-serif;
+  /* Kept for backwards compatibility */
+}
+
+@layer base {
+  html {
+    font-size: 62.5%;
+  }
+
+  body {
+    background-color: var(--color-flare-black);
+    color: var(--color-flare-white);
+    font-family: var(--font-sans);
+    font-size: 1.8rem;
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 700;
+    margin: 0;
+    line-height: 1.1;
+  }
+}
+
+@layer components {
+  .flare-card {
+    background-color: #1a1d23;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 2rem;
+    padding: 2.5rem;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .flare-card:hover {
+    border-color: var(--color-flare-red);
+    transform: translateY(-5px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+  }
+
+  .btn-flare {
+    background-color: var(--color-flare-red);
+    color: white;
+    font-weight: 700;
+    font-family: "Montserrat", sans-serif;
+    padding: 1.25rem 2.5rem;
+    border-radius: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    font-size: 1.2rem;
+    transition: all 0.2s;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .btn-flare:hover {
+    background-color: white;
+    color: black;
+    transform: translateY(-2px);
+  }
+
+  .btn-flare-outline {
+    background-color: transparent;
+    border: 2px solid white;
+    color: white;
+    font-weight: 700;
+    font-family: "Montserrat", sans-serif;
+    padding: 1.25rem 2.5rem;
+    border-radius: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    font-size: 1.2rem;
+    transition: all 0.2s;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .btn-flare-outline:hover {
+    background-color: white;
+    color: black;
+  }
+
+  .input-flare {
+    background-color: #1a1d23;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: white;
+    padding: 1.5rem;
+    border-radius: 1rem;
+    width: 100%;
+    outline: none;
+    transition: all 0.2s;
+  }
+
+  .input-flare:focus {
+    border-color: var(--color-flare-red);
+  }
+
+  /* Alertes formulaire — rouge, petite taille */
+  .form-alert,
+  .error-banner,
+  .error-msg-modal,
+  .error-box,
+  .alert.error {
+    color: #ef4444;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 1.35;
+  }
+
+  .error-banner,
+  .error-box,
+  .alert.error {
+    background: rgba(239, 68, 68, 0.08);
+    border: 1px solid rgba(239, 68, 68, 0.22);
+    padding: 8px 12px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 10px;
+  }
+
+  .error-msg-modal {
+    background: transparent;
+    border: none;
+    padding: 0;
+    margin: 0 0 12px;
+    text-align: center;
+    display: block;
+  }
+
+  .error-banner svg {
+    width: 14px;
+    height: 14px;
+    flex-shrink: 0;
+    color: #ef4444;
+  }
+}
